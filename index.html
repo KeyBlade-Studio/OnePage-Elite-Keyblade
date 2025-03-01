@@ -1,123 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OnePage Elite Keyblade Template</title>
-  
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-  <!-- AOS CSS (for animations) -->
-  <link rel="stylesheet" href="assets/vendor/aos/aos.css">
-  <!-- Custom CSS with variables (palette personalizzabile) -->
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnePage Elite Keyblade Template</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- AOS CSS (for animations) -->
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <!-- Custom CSS with variables (palette personalizzabile) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <!-- Header Section -->
-  <header class="site-header">
-    <!-- Navigation Bar with innovative glassmorphism effect -->
-    <nav class="navbar navbar-glass">
-      <div class="container navbar-container">
-        <!-- Logo / Brand -->
-        <a href="#" class="logo">Elite OnePage</a>
-        <!-- Navigation Links -->
-        <ul class="nav-links">
-            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>          
-        <!-- Hamburger Menu for Mobile with innovative animation -->
-        <button class="hamburger" aria-label="Toggle navigation">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </div>
-    </nav>
+    <!-- Header Section -->
 
-    <div>
-        <h1>
-            la mia bouzyna non capicce niente 
-        </h1>
-    </div>
-  
-    <!-- Hero Section with AOS animation -->
-    <section class="hero" data-aos="fade-up">
-      <div class="container hero-container">
-        <h1 class="hero-title">Welcome to Elite OnePage | Free Starter Edition</h1>
-        <p class="hero-subtitle">Experience modern design and advanced features.</p>
-        <a href="#features" class="btn btn-primary">Get Started</a>
-      </div>
-    </section>
-  </header>
-  
-  
-  <!-- Main Content Section -->
-  <main class="site-main">
-    <section id="intro" class="section intro-section">
-      <div class="container">
-        <h2 class="section-title">Introduction</h2>
-        <p class="section-text">
-          This is a modern one-page template with advanced design and functionalities.
-        </p>
-      </div>
-    </section>
-    <!-- Altre sezioni verranno aggiunte qui -->
-  </main>
-  
-  <!-- Footer Section -->
-  <footer class="site-footer">
-    <div class="container footer-container">
-      <p class="footer-text">&copy; 2025 KeyBlade Studio. All rights reserved.</p>
-    </div>
-  </footer>
+    <header class="site-header">
+        <!-- Particles Background Container -->
+        <div id="particles-js"></div>
 
-  <!-- ------------------------------------------------------ -->
+        <!-- Navigation Bar with innovative glassmorphism effect -->
+        <nav class="navbar navbar-glass">
+            <div class="container navbar-container">
+                <!-- Logo / Brand -->
+                <a href="index.html" class="logo">
+                <svg width="250" height="50" viewBox="0 0 250 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <style>
+                      .text { fill: white; font-family: 'Poppins', sans-serif; font-size: 32px; font-weight: bold; }
+                      .accent { fill: var(--accent-color); }
+                    </style>
+                    <text x="10" y="35" class="text">Elite <tspan class="accent">Template</tspan></text>
+                </svg>
+               
+               </a>
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <!-- Hamburger Menu for Mobile with innovative animation -->
+                <button class="hamburger" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
 
-  <!-- Theme Customizer Toggle Button (Gear Icon) -->
-<div id="customizer-toggle">
-    <span>&#9881;</span> <!-- Unicode gear icon (⚙) -->
-  </div>
-  
-  <!-- Theme Customizer Panel -->
-  <div id="theme-customizer">
-    <button id="customizer-close">&times;</button>
-    <h3 class="ms-5">Customize your theme!</h3>
-    <div class="customizer-field">
-      <label for="primary-color-picker">Primary Color</label>
-      <input type="color" id="primary-color-picker" value="#ff007f">
-    </div>
-    <div class="customizer-field">
-      <label for="accent-color-picker">Accent Color</label>
-      <input type="color" id="accent-color-picker" value="#00faff">
-    </div>
-    <div class="customizer-field">
-      <label for="link-color-picker">Link Color</label>
-      <input type="color" id="link-color-picker" value="#ff007f">
-    </div>
-    <div class="customizer-field">
-      <label for="link-hover-color-picker">Link Hover Color</label>
-      <input type="color" id="link-hover-color-picker" value="#00faff">
-    </div>
-    <h3 class="fs-5 fst-italic text-warning">Just update the color variables at the top of style.css with your RGB values.</h3>
-  </div>
+        <!-- Hero Section with AOS animation -->
+        <section class="hero" data-aos="fade-up">
+            <div class="container hero-container">
+                <h1 class="hero-title">Welcome to Elite OnePage | Free Starter Edition</h1>
+                <p class="hero-subtitle">Experience modern design and advanced features.</p>
+                <a href="#features" class="btn btn-primary">Get Started</a>
+            </div>
+        </section>
+    </header>
 
-  <!-- ------------------------------------------------------ -->
-  
-  <!-- Bootstrap JS Bundle -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script>
-    // Initialize AOS for scroll animations
-    AOS.init();
-  </script>
-  <!-- Custom JS -->
-  <script src="assets/js/script.js"></script>
+
+    <!-- Main Content Section -->
+    <main class="site-main">
+        <section id="intro" class="section intro-section">
+            <div class="container">
+                <h2 class="section-title">Introduction</h2>
+                <p class="section-text">
+                    This is a modern one-page template with advanced design and functionalities.
+                </p>
+            </div>
+        </section>
+        <!-- Altre sezioni verranno aggiunte qui -->
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p class="footer-text">&copy; 2025 KeyBlade Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ------------------------------------------------------ -->
+
+    <!-- Theme Customizer Toggle Button (Gear Icon) -->
+    <div id="customizer-toggle">
+        <span>&#9881;</span> <!-- Unicode gear icon (⚙) -->
+    </div>
+
+    <!-- Theme Customizer Panel -->
+    <div id="theme-customizer">
+        <button id="customizer-close">&times;</button>
+        <h3 class="ms-5">Customize your theme!</h3>
+        <div class="customizer-field">
+            <label for="primary-color-picker">Primary Color</label>
+            <input type="color" id="primary-color-picker" value="#ff007f">
+        </div>
+        <div class="customizer-field">
+            <label for="accent-color-picker">Accent Color</label>
+            <input type="color" id="accent-color-picker" value="#00faff">
+        </div>
+        <div class="customizer-field">
+            <label for="link-color-picker">Link Color</label>
+            <input type="color" id="link-color-picker" value="#ff007f">
+        </div>
+        <div class="customizer-field">
+            <label for="link-hover-color-picker">Link Hover Color</label>
+            <input type="color" id="link-hover-color-picker" value="#00faff">
+        </div>
+        <h3 class="fs-5 fst-italic text-warning">Just update the color variables at the top of style.css with your RGB
+            values.</h3>
+    </div>
+
+    <!-- ------------------------------------------------------ -->
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script>
+        // Initialize AOS for scroll animations
+        AOS.init();
+    </script>
+    <!-- Custom JS -->
+    <script defer src="assets/js/script.js"></script>
+    <!-- GSAP JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- PARTICLES JS -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
 </body>
+
 </html>
