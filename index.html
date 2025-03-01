@@ -4,14 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OnePage Elite Keyblade Template</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- AOS CSS (for animations) -->
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <!-- Custom CSS with variables -->
+    <link rel="stylesheet" href="assets/css/styles.css">
   <!-- Link to external CSS file -->
 </head>
 <body>
   <!-- Header Section: Place your navigation or header content here -->
   <header>
-    <h1>Welcome to OnePage Elite Keyblade</h1>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="container">
+        <!-- Logo or Brand Name -->
+        <a href="#" class="logo">KeyBlade Studio</a>
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#intro">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- Hamburger Menu for Mobile -->
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Welcome to OnePage Elite Keyblade Template</h1>
+        <p>Experience modern design and advanced features.</p>
+        <a href="#features" class="btn">Discover More</a>
+      </div>
+    </section>
   </header>
+  
 
   <!-- Main Content Section: This is where the main content goes -->
   <main>
@@ -27,7 +61,16 @@
     <p>&copy; 2025 KeyBlade Studio. All rights reserved.</p>
   </footer>
 
-  <script src="js/script.js"></script>
+   <!-- Bootstrap JS Bundle -->
+   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <!-- AOS JS -->
+   <script src="assets/vendor/aos/aos.js"></script>
+   <script>
+     // Initialize AOS for scroll animations
+     AOS.init();
+   </script>
+   <!-- Custom JS -->
+   <script src="assets/js/script.js"></script>
   <!-- Link to external JavaScript file -->
 </body>
 </html>
