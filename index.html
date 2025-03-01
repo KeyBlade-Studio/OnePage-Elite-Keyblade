@@ -4,73 +4,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OnePage Elite Keyblade Template</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <!-- AOS CSS (for animations) -->
-    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
-    <!-- Custom CSS with variables -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-  <!-- Link to external CSS file -->
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <!-- AOS CSS (for animations) -->
+  <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+  <!-- Custom CSS with variables (palette personalizzabile) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header Section: Place your navigation or header content here -->
-  <header>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <div class="container">
-        <!-- Logo or Brand Name -->
-        <a href="#" class="logo">KeyBlade Studio</a>
+  <!-- Header Section -->
+  <header class="site-header">
+    <!-- Navigation Bar with innovative glassmorphism effect -->
+    <nav class="navbar navbar-glass">
+      <div class="container navbar-container">
+        <!-- Logo / Brand -->
+        <a href="#" class="logo">Elite OnePage</a>
         <!-- Navigation Links -->
         <ul class="nav-links">
-          <li><a href="#intro">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <!-- Hamburger Menu for Mobile -->
-        <button class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>          
+        <!-- Hamburger Menu for Mobile with innovative animation -->
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </button>
       </div>
     </nav>
+
+    <div>
+        <h1>
+            la mia bouzyna non capicce niente 
+        </h1>
+    </div>
   
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <h1>Welcome to OnePage Elite Keyblade Template</h1>
-        <p>Experience modern design and advanced features.</p>
-        <a href="#features" class="btn">Discover More</a>
+    <!-- Hero Section with AOS animation -->
+    <section class="hero" data-aos="fade-up">
+      <div class="container hero-container">
+        <h1 class="hero-title">Welcome to Elite OnePage | Free Starter Edition</h1>
+        <p class="hero-subtitle">Experience modern design and advanced features.</p>
+        <a href="#features" class="btn btn-primary">Get Started</a>
       </div>
     </section>
   </header>
   
-
-  <!-- Main Content Section: This is where the main content goes -->
-  <main>
-    <section id="intro">
-      <h2>Introduction</h2>
-      <p>This is a modern one-page template with advanced design and functionalities.</p>
+  
+  <!-- Main Content Section -->
+  <main class="site-main">
+    <section id="intro" class="section intro-section">
+      <div class="container">
+        <h2 class="section-title">Introduction</h2>
+        <p class="section-text">
+          This is a modern one-page template with advanced design and functionalities.
+        </p>
+      </div>
     </section>
-    <!-- Add more sections as needed -->
+    <!-- Altre sezioni verranno aggiunte qui -->
   </main>
-
-  <!-- Footer Section: Place footer information here -->
-  <footer>
-    <p>&copy; 2025 KeyBlade Studio. All rights reserved.</p>
+  
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p class="footer-text">&copy; 2025 KeyBlade Studio. All rights reserved.</p>
+    </div>
   </footer>
 
-   <!-- Bootstrap JS Bundle -->
-   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-   <!-- AOS JS -->
-   <script src="assets/vendor/aos/aos.js"></script>
-   <script>
-     // Initialize AOS for scroll animations
-     AOS.init();
-   </script>
-   <!-- Custom JS -->
-   <script src="assets/js/script.js"></script>
-  <!-- Link to external JavaScript file -->
+  <!-- ------------------------------------------------------ -->
+
+  <!-- Theme Customizer Toggle Button (Gear Icon) -->
+<div id="customizer-toggle">
+    <span>&#9881;</span> <!-- Unicode gear icon (⚙) -->
+  </div>
+  
+  <!-- Theme Customizer Panel -->
+  <div id="theme-customizer">
+    <button id="customizer-close">&times;</button>
+    <h3 class="ms-5">Customize your theme!</h3>
+    <div class="customizer-field">
+      <label for="primary-color-picker">Primary Color</label>
+      <input type="color" id="primary-color-picker" value="#ff007f">
+    </div>
+    <div class="customizer-field">
+      <label for="accent-color-picker">Accent Color</label>
+      <input type="color" id="accent-color-picker" value="#00faff">
+    </div>
+    <div class="customizer-field">
+      <label for="link-color-picker">Link Color</label>
+      <input type="color" id="link-color-picker" value="#ff007f">
+    </div>
+    <div class="customizer-field">
+      <label for="link-hover-color-picker">Link Hover Color</label>
+      <input type="color" id="link-hover-color-picker" value="#00faff">
+    </div>
+    <h3 class="fs-5 fst-italic text-warning">Just update the color variables at the top of style.css with your RGB values.</h3>
+  </div>
+
+  <!-- ------------------------------------------------------ -->
+  
+  <!-- Bootstrap JS Bundle -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script>
+    // Initialize AOS for scroll animations
+    AOS.init();
+  </script>
+  <!-- Custom JS -->
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
