@@ -19,6 +19,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
 </head>
 
 <body>
@@ -73,7 +76,7 @@
             <div class="container hero-container">
                 <h1 class="hero-title">Welcome to Elite OnePage | Free Starter Edition</h1>
                 <p class="hero-subtitle">Experience modern design and advanced features.</p>
-                <a href="#features" class="btn btn-primary">Get Started</a>
+                <a href="#" class="btn btn-primary">Get Started</a>
                 <p class="section-text mt-4">
                     <span id="typed-text"></span>
                 </p>
@@ -117,14 +120,79 @@
         </section>
 
 
-        <!-- Services Section -->
+        <!-- Services Section with flip cards -->
         <section id="services" class="section services-section">
             <div class="container">
-                <h2 class="section-title">Services</h2>
+                <h2 class="section-title typed-text"><i class="bi bi-speedometer2"></i> Enhanced Performance</h2>
                 <p class="section-text">
-                    <!-- Content for Services will go here -->
+                    This adaptable section highlights the core strengths and built-in advantages of your project.
+                    Easily customize each element to match any industry, style, or unique vision.
                 </p>
+
+                <div class="services-grid">
+                    <!-- Service Card 1 -->
+                    <div class="service-card" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="card-inner">
+                            <!-- Front Side -->
+                            <div class="card-front">
+                                <!-- Example icon (FontAwesome / Bootstrap Icons / etc.) -->
+                                <i class="bi bi-grid-1x2-fill"></i>
+                                <h3>Dynamic Blocks</h3>
+                            </div>
+                            <!-- Back Side -->
+                            <div class="card-back">
+                                <p>
+                                    Ready-to-use blocks that bring modern layouts and unique design to any website, no
+                                    matter the niche.
+                                </p>
+                                <a href="#" class="btn btn-primary">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="service-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <i class="bi bi-puzzle"></i>
+                                <h3>Seamless Integration</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    Easily adaptable components designed to fit seamlessly into any project, ensuring
+                                    flexibility and scalability.
+                                </p>
+                                <a href="#" class="btn btn-primary">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="service-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <i class="bi bi-rocket-fill"></i>
+                                <h3>High-Performance</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    Optimized for speed and efficiency, ensuring smooth user experiences across all
+                                    devices and platforms.
+                                </p>
+                                <a href="#" class="btn btn-primary">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more cards as needed -->
+                </div>
             </div>
+        </section>
+
+
+        <!-- Black HR Divider with mini particles -->
+        <section class="divider-hr">
+            <hr class="thick-black-hr" />
         </section>
 
         <!-- Portfolio Section -->
@@ -185,14 +253,14 @@
             <label for="accent-color-picker">Accent Color</label>
             <input type="color" id="accent-color-picker" value="#00faff">
         </div>
-        <div class="customizer-field">
+        <!-- <div class="customizer-field">
             <label for="link-color-picker">Link Color</label>
             <input type="color" id="link-color-picker" value="#ff007f">
         </div>
         <div class="customizer-field">
             <label for="link-hover-color-picker">Link Hover Color</label>
             <input type="color" id="link-hover-color-picker" value="#00faff">
-        </div>
+        </div> -->
         <h3 class="fs-5 fst-italic text-warning">Just update the color variables at the top of style.css with your RGB
             values.</h3>
     </div>
@@ -215,6 +283,9 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <!-- TYPED JS -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+    <div class="custom-cursor"></div>
 
 </body>
 
