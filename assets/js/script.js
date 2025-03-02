@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let flash = document.createElement("div");
         flash.className = "particle-glow";
         flash.style.left = Math.random() * 100 + "vw";
-        flash.style.top = Math.random() * 40 + "vh"; // Limited to header area
+        flash.style.top = Math.random() * 40 + "vh"; 
         document.querySelector("header").appendChild(flash);
         setTimeout(() => flash.remove(), 400);
     }, 2500);
@@ -225,11 +225,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(cursorTrail);
 
     document.addEventListener("mousemove", (e) => {
-        // Position the trail exactly at the cursor (CSS handles centering)
+        
         cursorTrail.style.left = e.clientX + "px";
         cursorTrail.style.top = e.clientY + "px";
     });
 });
+
 
 
 // ------------------------- PARTICLES END
@@ -264,44 +265,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ------------------------- MINI PARTICLES
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Get dynamic colors from CSS
-    const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
-    const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
+ document.addEventListener("DOMContentLoaded", function () {
+    
+     const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
+     const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
 
-    particlesJS("mini-particles", {
-      "particles": {
-        "number": { "value": 150 }, // Meno particelle per evidenziare le connessioni
-        "color": { "value": [primaryColor, accentColor] },
-        "shape": { "type": "polygon", "polygon": { "nb_sides": 6 } }, // Particelle esagonali
-        "opacity": { "value": 0.1 },
-        "size": { "value": 3 },
-        "line_linked": { 
-          "enable": true, 
-          "distance": 120, // Distanza massima per creare connessioni
-          "color": primaryColor, 
-          "opacity": 0.6, 
-          "width": 1.5 
-        },
-        "move": { "enable": true, "speed": 2 }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "grab" }, // Effetto al passaggio del mouse
-          "onclick": { "enable": true, "mode": "push" }, // Click per aggiungere particelle
-          "resize": true
-        },
-        "modes": {
-          "grab": { "distance": 140, "line_linked": { "opacity": 0.9 } }, // Effetto "attira" linee col mouse
-          "push": { "particles_nb": 4 }
-        }
-      },
-      "retina_detect": true
-    });
-});
+     particlesJS("mini-particles", {
+         "particles": {
+             "number": { "value": 150 }, 
+             "color": { "value": [primaryColor, accentColor] },
+             "shape": { "type": "polygon", "polygon": { "nb_sides": 6 } }, 
+             "opacity": { "value": 0.1 },
+             "size": { "value": 3 },
+             "line_linked": {
+                 "enable": true,
+                 "distance": 120,
+                 "color": primaryColor,
+                 "opacity": 0.6,
+                 "width": 1.5
+             },
+             "move": { "enable": true, "speed": 2 }
+         },
+         "interactivity": {
+             "detect_on": "canvas",
+             "events": {
+                 "onhover": { "enable": true, "mode": "grab" }, 
+                 "onclick": { "enable": true, "mode": "push" }, 
+                 "resize": true
+             },
+             "modes": {
+                 "grab": { "distance": 140, "line_linked": { "opacity": 0.9 } }, 
+                 "push": { "particles_nb": 4 }
+             }
+         },
+         "retina_detect": true
+     });
+ });
 
 
 // ------------------------- MINI PARTICLES END
+
+
+
+
+
+
+
 
 
