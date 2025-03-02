@@ -16,8 +16,7 @@ closeBtn.addEventListener('click', function () {
 // Set up event listeners for color pickers
 const primaryPicker = document.getElementById('primary-color-picker');
 const accentPicker = document.getElementById('accent-color-picker');
-const linkPicker = document.getElementById('link-color-picker');
-const linkHoverPicker = document.getElementById('link-hover-color-picker');
+
 
 // Update primary color and related gradients
 primaryPicker.addEventListener('input', (e) => {
@@ -33,78 +32,74 @@ accentPicker.addEventListener('input', (e) => {
     document.documentElement.style.setProperty('--header-bg', `linear-gradient(90deg, var(--primary-color), ${e.target.value})`);
 });
 
-// Update link color
-linkPicker.addEventListener('input', (e) => {
-    document.documentElement.style.setProperty('--link-color', e.target.value);
-});
 
-// Update link hover color
-linkHoverPicker.addEventListener('input', (e) => {
-    document.documentElement.style.setProperty('--link-hover-color', e.target.value);
-});
 // Toggle Customizer Panel END------------------------------------------------
 
 // ------------------------- HAMBURGER
 
-// Select the hamburger button and the nav-links container
+
+// Select the hamburger button and the navigation links container
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
+const links = document.querySelectorAll('.nav-links a');
 
-// Toggle the mobile menu and the hamburger animation on click
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('open');
+// Function to open the menu with GSAP animation
+function openMenu() {
+    // Add active class to hamburger and open class to navigation links
+    hamburger.classList.add('active');
+    navLinks.classList.add('open');
+
+    // Animate the links appearing one by one with a slight delay
+    gsap.fromTo(links,
+        { opacity: 0, y: 20 }, // Start with links invisible and moved down
+        { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 } // Animate to full opacity and normal position
+    );
+}
+
+// Function to close the menu
+function closeMenu() {
+    // Animate the links disappearing before closing the menu
+    gsap.to(links, {
+        opacity: 0,
+        y: 20,
+        duration: 0.3,
+        stagger: -0.1,
+        onComplete: () => {
+            // Remove active/open classes after animation completes
+            navLinks.classList.remove('open');
+            hamburger.classList.remove('active');
+
+            // Ensure links remain visible when reopening the menu
+            gsap.set(links, { opacity: 1, y: 0 });
+        }
+    });
+}
+
+// Toggle menu when clicking on the hamburger button
+hamburger.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent event bubbling
+    if (navLinks.classList.contains('open')) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
 });
+
+// Close the menu when clicking on a navigation link
+links.forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
+
+// Close the menu when clicking outside of it
+document.addEventListener('click', (event) => {
+    if (navLinks.classList.contains('open') && !navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+        closeMenu();
+    }
+});
+
 
 
 // ------------------------- HAMBURGER END
-
-
-// ------------------------- GSAP NAVBAR
-
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
-    const navItems = document.querySelectorAll(".nav-item");
-
-    let menuOpen = false;
-
-    hamburger.addEventListener("click", () => {
-        menuOpen = !menuOpen;
-
-        if (menuOpen) {
-
-            gsap.to(navLinks, {
-                duration: 0,
-                height: "auto",
-                opacity: 1,
-                ease: "power2.out",
-                display: "block"
-            });
-
-
-            gsap.fromTo(
-                navItems,
-                { opacity: 0, y: -20 },
-                { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: "power2.out" }
-            );
-        } else {
-
-            gsap.to(navLinks, {
-                duration: 0,
-                opacity: 0,
-                height: 0,
-                ease: "power2.in",
-                onComplete: () => {
-                    navLinks.style.display = "none";
-                }
-            });
-        }
-
-    });
-});
-
-// ------------------------- GSAP NAVBAR END
 
 // ------------------------- PARTICLES 
 
@@ -215,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let flash = document.createElement("div");
         flash.className = "particle-glow";
         flash.style.left = Math.random() * 100 + "vw";
-        flash.style.top = Math.random() * 40 + "vh"; 
+        flash.style.top = Math.random() * 40 + "vh";
         document.querySelector("header").appendChild(flash);
         setTimeout(() => flash.remove(), 400);
     }, 2500);
@@ -225,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(cursorTrail);
 
     document.addEventListener("mousemove", (e) => {
-        
+
         cursorTrail.style.left = e.clientX + "px";
         cursorTrail.style.top = e.clientY + "px";
     });
@@ -235,6 +230,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ------------------------- PARTICLES END
 
+// particles customizer
+
+function initParticles() {
+    const primaryColor = document.querySelector("#primary-color-picker").value;
+    const accentColor = document.querySelector("#accent-color-picker").value;
+
+    particlesJS("customizer-panel-particles", {
+        particles: {
+            number: { value: 100 }, 
+            color: { value: [primaryColor, accentColor] }, 
+            shape: { type: "circle" }, 
+            opacity: { value: 0.7, anim: { enable: true, speed: 1 } },
+            size: { value: 4, anim: { enable: true, speed: 2 } }, 
+            move: {
+                speed: 2, 
+                attract: { enable: true, rotateX: 600, rotateY: 1200 } 
+            }
+        },
+        interactivity: {
+            events: { 
+                onhover: { enable: true, mode: "grab" }, // Attraction Effect
+                onclick: { enable: true, mode: "bubble" } 
+            },
+            modes: {
+                grab: { distance: 140, line_linked: { opacity: 1 } }, // Connection Effect
+                bubble: { size: 40, distance: 400 } // CLick Boom
+            }
+        }
+    });
+}
+
+
+initParticles();
+
+// Change colors
+document.querySelector("#primary-color-picker").addEventListener("input", initParticles);
+document.querySelector("#accent-color-picker").addEventListener("input", initParticles);
+
+
+// particles customizer END
 
 // ------------------------- TYPED 
 
@@ -265,42 +300,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ------------------------- MINI PARTICLES
 
- document.addEventListener("DOMContentLoaded", function () {
-    
-     const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
-     const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
+document.addEventListener("DOMContentLoaded", function () {
 
-     particlesJS("mini-particles", {
-         "particles": {
-             "number": { "value": 150 }, 
-             "color": { "value": [primaryColor, accentColor] },
-             "shape": { "type": "polygon", "polygon": { "nb_sides": 6 } }, 
-             "opacity": { "value": 0.1 },
-             "size": { "value": 3 },
-             "line_linked": {
-                 "enable": true,
-                 "distance": 120,
-                 "color": primaryColor,
-                 "opacity": 0.6,
-                 "width": 1.5
-             },
-             "move": { "enable": true, "speed": 2 }
-         },
-         "interactivity": {
-             "detect_on": "canvas",
-             "events": {
-                 "onhover": { "enable": true, "mode": "grab" }, 
-                 "onclick": { "enable": true, "mode": "push" }, 
-                 "resize": true
-             },
-             "modes": {
-                 "grab": { "distance": 140, "line_linked": { "opacity": 0.9 } }, 
-                 "push": { "particles_nb": 4 }
-             }
-         },
-         "retina_detect": true
-     });
- });
+    const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
+    const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
+
+    particlesJS("mini-particles", {
+        "particles": {
+            "number": { "value": 150 },
+            "color": { "value": [primaryColor, accentColor] },
+            "shape": { "type": "polygon", "polygon": { "nb_sides": 6 } },
+            "opacity": { "value": 0.1 },
+            "size": { "value": 3 },
+            "line_linked": {
+                "enable": true,
+                "distance": 120,
+                "color": primaryColor,
+                "opacity": 0.6,
+                "width": 1.5
+            },
+            "move": { "enable": true, "speed": 2 }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": { "enable": true, "mode": "grab" },
+                "onclick": { "enable": true, "mode": "push" },
+                "resize": true
+            },
+            "modes": {
+                "grab": { "distance": 140, "line_linked": { "opacity": 0.9 } },
+                "push": { "particles_nb": 4 }
+            }
+        },
+        "retina_detect": true
+    });
+});
 
 
 // ------------------------- MINI PARTICLES END

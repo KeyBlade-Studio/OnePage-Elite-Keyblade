@@ -25,7 +25,7 @@
   /* Button text color */
   --btn-border: none;
   /* No border for buttons */
-  --btn-hover-bg: linear-gradient(90deg, #00e0e0, #e60073);
+  --btn-hover-bg: linear-gradient(90deg, var(--accent-color), var(--primary-color));
   /* Neon gradient for hover state with colors swapped */
   --btn-hover-color: #ffffff;
   /* Button text remains white on hover */
@@ -90,6 +90,13 @@ html {
   scrollbar-width: thin;
 }
 
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 /* Theme Customizer Toggle Button */
 #customizer-toggle {
   position: fixed;
@@ -112,7 +119,7 @@ html {
   /* Hidden off-screen */
   width: 250px;
   height: 100%;
-  background: var(--surface-color);
+  background: rgb(12, 12, 12);
   color: var(--secondary-color);
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   padding: 20px;
@@ -137,9 +144,21 @@ html {
   left: 10px;
 }
 
+/* Background particles */
+#customizer-panel-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Porta i particles dietro il contenuto */
+}
+
 /* Customizer Field Styles */
 .customizer-field {
   margin-bottom: 15px;
+  margin-top: 5rem;
 }
 
 .customizer-field label {
@@ -155,6 +174,11 @@ html {
   cursor: pointer;
 }
 
+.customizer-warning {
+  position: absolute;
+  bottom: 5rem;
+}
+
 /* Logo Elite */
 .logo-elite {
   max-width: 62px;
@@ -162,7 +186,8 @@ html {
 
 /* Link Styles with Gradient Hover Effect */
 a {
-  background-image: linear-gradient(90deg, var(--link-color), var(--link-hover-color));
+  /* background-image: linear-gradient(90deg, var(--link-color), var(--link-hover-color)); */
+  background-image: linear-gradient(90deg, var(--accent-color), var(--primary-color));
   background-size: 200% auto;
   background-position: left center;
   -webkit-background-clip: text;
@@ -345,7 +370,7 @@ a:hover {
   position: relative;
   z-index: 1;
   /* Optional background image (update path as needed) */
-  background: url('assets/images/hero-bg.jpg') center/cover no-repeat;
+  /* background: url(../images/hero-image.jpg) center/cover no-repeat; */
 }
 
 /* Optional overlay for improved text contrast */
@@ -732,6 +757,14 @@ a:hover {
   .about-image,
   .about-content {
     min-width: auto;
+  }
+
+  .customizer-field {
+    margin-top: 7rem;
+  }
+
+  #theme-customizer > h3 {
+    margin-left: 1rem !important;
   }
 
 }

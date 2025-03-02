@@ -243,8 +243,10 @@
 
     <!-- Theme Customizer Panel -->
     <div id="theme-customizer">
+        <!-- Particles Background -->
+        <div id="customizer-panel-particles"></div>
         <button id="customizer-close">&times;</button>
-        <h3 class="ms-5">Customize your theme!</h3>
+        <h3 class="ms-5 mt-5">Customize your theme!</h3>
         <div class="customizer-field">
             <label for="primary-color-picker">Primary Color</label>
             <input type="color" id="primary-color-picker" value="#ff007f">
@@ -253,19 +255,11 @@
             <label for="accent-color-picker">Accent Color</label>
             <input type="color" id="accent-color-picker" value="#00faff">
         </div>
-        <div class="customizer-field">
-            <label for="link-color-picker">Link Color</label>
-            <input type="color" id="link-color-picker" value="#ff007f">
-        </div>
-        <div class="customizer-field">
-            <label for="link-hover-color-picker">Link Hover Color</label>
-            <input type="color" id="link-hover-color-picker" value="#00faff">
-        </div>
-        <h3 class="fs-5 fst-italic text-warning">Just update the color variables at the top of style.css with your RGB
+        <h3 class="fs-5 fst-italic text-warning customizer-warning">Just update the color variables at the top of style.css with your
+            RGB
             values.</h3>
     </div>
 
-    <!-- TODO: togliere i 2 colori inutili senza far impazzire js quindi sistema js cosi non li chiama piu -->
 
     <!-- ------------------------------------------------------ -->
 
@@ -284,132 +278,6 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
-    
-   <!-- <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    let primaryColor = getComputedStyle(document.documentElement)
-        .getPropertyValue("--primary-color").trim();
-    let secondaryColor = getComputedStyle(document.documentElement)
-        .getPropertyValue("--secondary-color").trim();
-    let accentColor = getComputedStyle(document.documentElement)
-        .getPropertyValue("--accent-color").trim();
-
-    particlesJS("particles-js", {
-        "particles": {
-            "number": {
-                "value": 400,
-                "density": {
-                    "enable": true,
-                    "value_area": 1000
-                }
-            },
-            "color": {
-                "value": [primaryColor, secondaryColor, accentColor]
-            },
-            "shape": {
-                "type": ["circle", "triangle"],
-                "stroke": {
-                    "width": 1,
-                    "color": "#222222"
-                }
-            },
-            "opacity": {
-                "value": 0.5,
-                "random": true,
-                "anim": {
-                    "enable": true,
-                    "speed": 1,
-                    "opacity_min": 0.2,
-                    "sync": false
-                }
-            },
-            "size": {
-                "value": 4,
-                "random": true,
-                "anim": {
-                    "enable": true,
-                    "speed": 2,
-                    "size_min": 1,
-                    "sync": false
-                }
-            },
-            "line_linked": {
-                "enable": true,
-                "distance": 90,
-                "color": primaryColor,
-                "opacity": 0.5,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 2,
-                "direction": "none",
-                "random": true,
-                "straight": false,
-                "out_mode": "out",
-                "bounce": false
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "bubble"
-                },
-                "onclick": {
-                    "enable": true,
-                    "mode": "push"
-                },
-                "resize": true
-            },
-            "modes": {
-                "grab": {
-                    "distance": 120,
-                    "line_linked": {
-                        "opacity": 1
-                    }
-                },
-                "bubble": {
-                    "distance": 80,
-                    "size": 8,
-                    "duration": 1.5,
-                    "opacity": 0.9,
-                    "color": accentColor
-                },
-                "repulse": {
-                    "distance": 150,
-                    "duration": 0.4
-                },
-                "push": {
-                    "particles_nb": 5
-                }
-            }
-        },
-        "retina_detect": true
-    });
-
-    setInterval(() => {
-        let flash = document.createElement("div");
-        flash.className = "particle-glow";
-        flash.style.left = Math.random() * 100 + "vw";
-        flash.style.top = Math.random() * 40 + "vh"; 
-        document.querySelector("header").appendChild(flash);
-        setTimeout(() => flash.remove(), 400);
-    }, 2500);
-
-    let cursorTrail = document.createElement("div");
-    cursorTrail.className = "cursor-trail";
-    document.body.appendChild(cursorTrail);
-
-    document.addEventListener("mousemove", (e) => {
-        
-        cursorTrail.style.left = e.clientX + "px";
-        cursorTrail.style.top = e.clientY + "px";
-    });
-});
-   </script> -->
-  
 
 </body>
 
