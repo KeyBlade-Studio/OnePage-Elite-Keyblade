@@ -12,8 +12,13 @@
     <link rel="stylesheet" href="assets/vendor/aos/aos.css">
     <!-- Custom CSS with variables (palette personalizzabile) -->
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <!-- google font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -28,18 +33,26 @@
             <div class="container navbar-container">
                 <!-- Logo / Brand -->
                 <a href="index.html" class="logo">
-                <svg width="250" height="50" viewBox="0 0 250 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <style>
-                      .text { fill: white; font-family: 'Poppins', sans-serif; font-size: 32px; font-weight: bold; }
-                      .accent { fill: var(--accent-color); }
-                    </style>
-                    <text x="10" y="35" class="text">Elite <tspan class="accent">Template</tspan></text>
-                </svg>
-               
-               </a>
+                    <svg width="250" height="50" viewBox="0 0 250 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <style>
+                            .text {
+                                fill: white;
+                                font-family: 'Poppins', sans-serif;
+                                font-size: 32px;
+                                font-weight: bold;
+                            }
+
+                            .accent {
+                                fill: var(--accent-color);
+                            }
+                        </style>
+                        <text x="10" y="35" class="text">Elite <tspan class="accent">Template</tspan></text>
+                    </svg>
+
+                </a>
                 <!-- Navigation Links -->
                 <ul class="nav-links">
-                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
@@ -61,23 +74,90 @@
                 <h1 class="hero-title">Welcome to Elite OnePage | Free Starter Edition</h1>
                 <p class="hero-subtitle">Experience modern design and advanced features.</p>
                 <a href="#features" class="btn btn-primary">Get Started</a>
+                <p class="section-text mt-4">
+                    <span id="typed-text"></span>
+                </p>
             </div>
         </section>
     </header>
 
-
     <!-- Main Content Section -->
     <main class="site-main">
-        <section id="intro" class="section intro-section">
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container about-container">
+                <!-- Left Side: Image / Illustration -->
+                <div class="about-image" data-aos="fade-right">
+                    <img src="assets/images/About-Image.jpg" alt="About Illustration" />
+                </div>
+
+                <!-- Right Side: Text Content -->
+                <div class="about-content" data-aos="fade-left">
+                    <h2 class="section-title">About This Template</h2>
+                    <p class="section-text">
+                        This multipurpose template is designed to adapt seamlessly to any project, from personal
+                        portfolios to professional business sites. With a clean layout and flexible components, it can
+                        be tailored to reflect your unique style or brand identity.
+                    </p>
+                    <ul class="highlight-list">
+                        <li>Modern design blocks</li>
+                        <li>Responsive layout</li>
+                        <li>Customizable components</li>
+                    </ul>
+                    <a href="#portfolio" class="btn btn-primary btn-about">Explore Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Black HR Divider with mini particles -->
+        <section class="divider-hr">
+            <hr class="thick-black-hr" />
+            <div id="mini-particles"></div>
+        </section>
+
+
+        <!-- Services Section -->
+        <section id="services" class="section services-section">
             <div class="container">
-                <h2 class="section-title">Introduction</h2>
+                <h2 class="section-title">Services</h2>
                 <p class="section-text">
-                    This is a modern one-page template with advanced design and functionalities.
+                    <!-- Content for Services will go here -->
                 </p>
             </div>
         </section>
-        <!-- Altre sezioni verranno aggiunte qui -->
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section portfolio-section">
+            <div class="container">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-text">
+                    <!-- Content for Portfolio will go here -->
+                </p>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section testimonials-section">
+            <div class="container">
+                <h2 class="section-title">Testimonials</h2>
+                <p class="section-text">
+                    <!-- Content for Testimonials will go here -->
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-text">
+                    <!-- Content for Contact will go here -->
+                </p>
+            </div>
+        </section>
     </main>
+
 
     <!-- Footer Section -->
     <footer class="site-footer">
@@ -133,6 +213,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <!-- PARTICLES JS -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- TYPED JS -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 </body>
 

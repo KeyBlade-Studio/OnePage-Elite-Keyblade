@@ -233,3 +233,73 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // ------------------------- PARTICLES END
+
+
+// ------------------------- TYPED 
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Initialize typed text effect
+    var typed = new Typed("#typed-text", {
+        strings: [
+            "Feel free to explore advanced design.",
+            "Feel free to craft your own style."
+        ],
+        typeSpeed: 40,    // Speed of typing
+        backSpeed: 20,    // Speed of backspacing
+        backDelay: 3000,  // Delay before backspacing
+        loop: true        // Loop the typing effect
+    });
+
+    // Optional: Scroll down button behavior
+    var scrollBtn = document.querySelector(".scroll-down-btn");
+    if (scrollBtn) {
+        scrollBtn.addEventListener("click", function () {
+            // Smooth scroll to next section
+            document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+        });
+    }
+});
+
+// ------------------------- TYPED END
+
+// ------------------------- MINI PARTICLES
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get dynamic colors from CSS
+    const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
+    const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
+
+    particlesJS("mini-particles", {
+      "particles": {
+        "number": { "value": 150 }, // Meno particelle per evidenziare le connessioni
+        "color": { "value": [primaryColor, accentColor] },
+        "shape": { "type": "polygon", "polygon": { "nb_sides": 6 } }, // Particelle esagonali
+        "opacity": { "value": 0.1 },
+        "size": { "value": 3 },
+        "line_linked": { 
+          "enable": true, 
+          "distance": 120, // Distanza massima per creare connessioni
+          "color": primaryColor, 
+          "opacity": 0.6, 
+          "width": 1.5 
+        },
+        "move": { "enable": true, "speed": 2 }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" }, // Effetto al passaggio del mouse
+          "onclick": { "enable": true, "mode": "push" }, // Click per aggiungere particelle
+          "resize": true
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.9 } }, // Effetto "attira" linee col mouse
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+});
+
+
+// ------------------------- MINI PARTICLES END

@@ -204,7 +204,8 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; /* Behind other header content */
+  z-index: 0;
+  /* Behind other header content */
 }
 
 /* Overall Header */
@@ -321,7 +322,7 @@ a:hover {
     border-image: linear-gradient(90deg, var(--primary-color), var(--accent-color)) 1;
     text-align: center;
   }
-  
+
   .nav-links .nav-item:last-child {
     border-bottom: none;
   }
@@ -330,13 +331,13 @@ a:hover {
     margin-top: 26px;
     background: linear-gradient(90deg,
         rgba(0, 0, 0, 0.726) 0%,
-        
+
         rgba(105, 0, 104, 0.9) 33%,
-     
+
         rgba(0, 87, 138, 0.9) 66%,
-        
+
         rgba(0, 0, 0, 0.829) 100%);
-    
+
   }
 }
 
@@ -392,7 +393,7 @@ a:hover {
     flex-direction: column;
     position: absolute;
     top: 60px;
-    
+
     right: 0;
     background: var(--surface-color);
     width: 100%;
@@ -403,7 +404,7 @@ a:hover {
     display: flex;
   }
 
- 
+
   .nav-links .nav-item {
     padding: 10px 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -426,4 +427,186 @@ a:hover {
   transition: transform 0.1s ease-out;
 }
 
- /* PARTICLES EFFECT END */
+/* PARTICLES EFFECT END */
+
+
+/* typed.css intro */
+
+/* Intro Section styling */
+.intro-section {
+  position: relative;
+  padding: 100px 0;
+  text-align: center;
+  overflow: hidden;
+  /* For possible future effects */
+}
+
+/* Typed text styling */
+#typed-text {
+  display: inline-block;
+  font-size: 4vw;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  /* Optional: neon glow effect */
+  text-shadow: 0 0 28px var(--primary-color),
+    0 0 28px var(--accent-color);
+}
+
+/* typed.css intro END */
+
+/* About section */
+
+.about-section {
+  position: relative;
+  padding: 80px 0;
+  /* Adjust spacing as needed */
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows wrapping on smaller screens */
+  align-items: center;
+  gap: 40px;
+  /* Spacing between image and text */
+}
+
+/* Left Side: Image */
+.about-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+  /* Center the image if narrower screens */
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  /* Slightly rounded corners for a modern feel */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow */
+}
+
+/* Right Side: Content */
+.about-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-content .section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-content .section-text {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.highlight-list {
+  margin-bottom: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.highlight-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+/* Example of custom bullet with neon dot */
+.highlight-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+  box-shadow: 0 0 8px var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .highlight-list li::before {
+    display: inline;
+  }
+
+  .highlight-list li {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-about {
+    float: inline-end;
+    margin-top: -5.2rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .btn-about {
+    float: none;
+    margin-top: 0rem;
+  }
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image,
+  .about-content {
+    min-width: auto;
+  }
+}
+
+/* About section END */
+
+/* DIVIDER  */
+
+.divider-hr {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* Optional fixed height if you want a specific dimension for the divider section */
+  height: 80px;
+  background: none;
+  /* No background needed if the HR covers the entire area */
+}
+
+/* Thick black HR */
+.thick-black-hr {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  /* Make the hr fill the entire .divider-hr height */
+  background-color: #000;
+  /* Solid black */
+}
+
+/* Container for mini particles overlay */
+#mini-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* Particles are decorative */
+}
+
+/* DIVIDER END */
