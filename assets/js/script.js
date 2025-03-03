@@ -463,10 +463,6 @@ var testimonialSwiper = new Swiper('.testimonial-swiper', {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplay: {
-      delay: 3000, 
-      disableOnInteraction: true 
-    },
     breakpoints: {
       // Tablets
       768: {

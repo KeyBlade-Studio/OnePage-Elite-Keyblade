@@ -759,6 +759,11 @@ a:hover {
 .testimonials-section {
   padding: 80px 0;
   text-align: center;
+  position: relative;
+}
+
+.testimonial-swiper {
+  position: relative;
 }
 
 .testimonial-card {
@@ -795,7 +800,9 @@ a:hover {
 .swiper-button-next, 
 .swiper-button-prev {
   color: var(--primary-color) !important;
-  visibility: visible !important;
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
 }
 
 .swiper-pagination-bullet-active {
