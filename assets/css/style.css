@@ -750,9 +750,60 @@ a:hover {
   animation: resetOverlayAnimation 0.5s forwards;
 }
 
-
-
 /* PORTFOLIO SECTION END */
+
+
+/* TESTIMONIALS SECTION */
+
+/* Testimonials Section Styles */
+.testimonials-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.testimonial-card {
+  background: var(--surface-color);
+  /* Adjust with your color variable or a fallback color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 100%;
+}
+
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+}
+
+.testimonial-rating i {
+  color: gold;
+  margin: 0 2px;
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+/* Swiper Navigation and Pagination Styling (optional) */
+
+.swiper-button-next, 
+.swiper-button-prev {
+  color: var(--primary-color) !important;
+  visibility: visible !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--accent-color);
+}
+
+/* TESTIMONIALS SECTION END */
+
 
 
 
