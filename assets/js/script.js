@@ -238,20 +238,20 @@ function initParticles() {
 
     particlesJS("customizer-panel-particles", {
         particles: {
-            number: { value: 100 }, 
-            color: { value: [primaryColor, accentColor] }, 
-            shape: { type: "circle" }, 
+            number: { value: 100 },
+            color: { value: [primaryColor, accentColor] },
+            shape: { type: "circle" },
             opacity: { value: 0.7, anim: { enable: true, speed: 1 } },
-            size: { value: 4, anim: { enable: true, speed: 2 } }, 
+            size: { value: 4, anim: { enable: true, speed: 2 } },
             move: {
-                speed: 2, 
-                attract: { enable: true, rotateX: 600, rotateY: 1200 } 
+                speed: 2,
+                attract: { enable: true, rotateX: 600, rotateY: 1200 }
             }
         },
         interactivity: {
-            events: { 
+            events: {
                 onhover: { enable: true, mode: "grab" }, // Attraction Effect
-                onclick: { enable: true, mode: "bubble" } 
+                onclick: { enable: true, mode: "bubble" }
             },
             modes: {
                 grab: { distance: 140, line_linked: { opacity: 1 } }, // Connection Effect
@@ -341,9 +341,114 @@ document.addEventListener("DOMContentLoaded", function () {
 // ------------------------- MINI PARTICLES END
 
 
+// ------------------------- PORTFOLIO MODAL
 
+document.addEventListener('DOMContentLoaded', function () {
+    var portfolioModal = document.getElementById('portfolioModal');
+    var activePortfolioItem = null; // Store the portfolio item that triggered the modal
+  
+    // Update modal content when it is shown and store the triggering portfolio item
+    portfolioModal.addEventListener('show.bs.modal', function (event) {
+      var button = event.relatedTarget;
+      activePortfolioItem = button.closest('.portfolio-item');
+  
+      // Retrieve custom data attributes from the button
+      var title = button.getAttribute('data-title');
+      var description = button.getAttribute('data-description');
+      var image = button.getAttribute('data-image');
+  
+      // Select modal elements
+      var modalTitle = portfolioModal.querySelector('.modal-title');
+      var modalImage = portfolioModal.querySelector('#modalProjectImage');
+      var modalDescription = portfolioModal.querySelector('#modalProjectDescription');
+  
+      // Update modal content with the new data
+      modalTitle.textContent = title;
+      modalImage.src = image;
+      modalImage.alt = title;
+      modalDescription.textContent = description;
+    });
+  
+    // When the modal is hidden, trigger a CSS animation on the active portfolio item's overlay
+    portfolioModal.addEventListener('hidden.bs.modal', function () {
+      // Remove inline styles from all overlays as a fallback
+      var overlays = document.querySelectorAll('.portfolio-overlay');
+      overlays.forEach(function (overlay) {
+        overlay.removeAttribute('style');
+      });
+      
+      // If an active portfolio item exists, animate its overlay to reset to default state
+      if (activePortfolioItem) {
+        var overlay = activePortfolioItem.querySelector('.portfolio-overlay');
+        if (overlay) {
+          // Add the CSS class that triggers the reset animation
+          overlay.classList.add('reset-overlay');
+          // After the animation duration (500ms), remove the class and any inline styles
+          setTimeout(function () {
+            overlay.classList.remove('reset-overlay');
+            overlay.removeAttribute('style');
+            activePortfolioItem = null;
+          }, 500);
+        }
+      }
+      
+      // Optionally refresh AOS animations if AOS is used
+      if (typeof AOS !== 'undefined') {
+        AOS.refresh();
+      }
+    });
+  });
+  
+//   ---------------------------------------------------------------------
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Mapping of project IDs to modal content
+    var projectDetails = {
+      project1: {
+        title: "Landing Page",
+        description: "This is a customizable landing page template. Replace this text with your own content to showcase your project’s unique features, design, and message.",
+        image: "assets/images/project1.png"
+      },
+      project2: {
+        title: "Business Dashboard",
+        description: "This dashboard template is designed for versatility. Insert your project details here to highlight data-driven layouts and functionalities that suit your business needs.",
+        image: "assets/images/project2.png"
+      },
+      project3: {
+        title: "Artistic Showcase",
+        description: "This gallery page serves as a blank canvas for your creative work. Replace this description with details about your artistic vision, style, and projects.",
+        image: "assets/images/project3.png"
+      }
+      // Add more projects as needed
+    };
+  
+    var portfolioModal = document.getElementById('portfolioModal');
+  
+    // Listen for click events on all project buttons within portfolio items
+    var projectButtons = document.querySelectorAll('.portfolio-item a.btn');
+    projectButtons.forEach(function (button) {
+      button.addEventListener('click', function (event) {
+        var projectId = button.getAttribute('data-project');
+        var details = projectDetails[projectId];
+  
+        // Select modal elements
+        var modalTitle = portfolioModal.querySelector('.modal-title');
+        var modalImage = portfolioModal.querySelector('#modalProjectImage');
+        var modalDescription = portfolioModal.querySelector('#modalProjectDescription');
+  
+        // Update modal content with details from the mapping
+        if (details) {
+          modalTitle.textContent = details.title;
+          modalImage.src = details.image;
+          modalImage.alt = details.title;
+          modalDescription.textContent = details.description;
+        }
+      });
+    });
+  });
+  
 
+// ------------------------- PORTFOLIO MODAL END
 
 
 

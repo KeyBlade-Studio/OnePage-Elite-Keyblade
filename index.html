@@ -190,7 +190,7 @@
         </section>
 
 
-        <!-- Black HR Divider with mini particles -->
+        <!-- Black HR Divider without mini particles -->
         <section class="divider-hr">
             <hr class="thick-black-hr" />
         </section>
@@ -198,7 +198,9 @@
         <!-- Portfolio Section -->
         <section id="portfolio" class="section portfolio-section">
             <div class="container portfolio-container">
-                <h2 class="section-title typed-text"><i class="bi bi-collection"></i> Showcased Projects</h2>
+                <h2 class="section-title typed-text">
+                    <i class="bi bi-collection"></i> Showcased Projects
+                </h2>
                 <p class="section-text">
                     This dynamic portfolio section can highlight a wide range of projects, from creative design to
                     business solutions, demonstrating the template's versatility.
@@ -212,10 +214,12 @@
                         <div class="portfolio-overlay">
                             <h3>Creative Landing</h3>
                             <p>A modern landing page featuring cutting-edge design and responsive blocks.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                data-project="project1">
+                                View Project
+                            </a>
                         </div>
                     </div>
-
 
                     <!-- Item 2 -->
                     <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
@@ -224,7 +228,10 @@
                             <h3>Business Dashboard</h3>
                             <p>An adaptable dashboard interface showcasing data-driven layouts and modular components.
                             </p>
-                            <a href="#" class="btn btn-primary">View Project</a>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                data-project="project2">
+                                View Project
+                            </a>
                         </div>
                     </div>
 
@@ -234,17 +241,37 @@
                         <div class="portfolio-overlay">
                             <h3>Artistic Showcase</h3>
                             <p>A visually striking gallery page that emphasizes creativity and bold elements.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                                data-project="project3">
+                                View Project
+                            </a>
                         </div>
                     </div>
-
                     <!-- Add more portfolio items as needed -->
                 </div>
             </div>
         </section>
 
+        <!-- Single Portfolio Modal -->
+        <div class="modal fade" id="portfolioModal" tabindex="-1" aria-labelledby="portfolioModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-uppercase" id="portfolioModalLabel">Project Title</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="" alt="" class="img-fluid mb-3" id="modalProjectImage">
+                        <p id="modalProjectDescription">Project description goes here.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <!-- Black HR Divider with mini particles -->
+        <!-- Black HR Divider without mini particles -->
         <section class="divider-hr">
             <hr class="thick-black-hr" />
         </section>
