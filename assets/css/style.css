@@ -446,7 +446,7 @@ a:hover {
 
 .typed-text {
   display: inline-block;
-  font-size: 4vw;
+  font-size: 4vw !important;
   background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -456,6 +456,7 @@ a:hover {
   text-shadow: 0 0 28px var(--primary-color),
     0 0 28px var(--accent-color);
 }
+
 
 /* About section */
 
@@ -797,11 +798,11 @@ a:hover {
 
 /* Swiper Navigation and Pagination Styling (optional) */
 
-.swiper-button-next, 
+.swiper-button-next,
 .swiper-button-prev {
   color: var(--primary-color) !important;
   position: absolute;
-  top: 50%; 
+  top: 50%;
   transform: translateY(-50%);
 }
 
@@ -811,9 +812,178 @@ a:hover {
 
 /* TESTIMONIALS SECTION END */
 
+/* CONTACT SECTION */
+
+/* Contact Section Styles */
+.contact-section {
+  padding: 80px 0;
+  background: var(--background-color);
+}
+
+.contact-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-section .section-text {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Contact Details (Left Column) */
+.contact-details {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.contact-details h3 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-details p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.contact-details p i {
+  margin-right: 10px;
+  color: var(--primary-color);
+  /* Accent color */
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Contact Form (Right Column) */
+#contact-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form .form-control {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+#contact-form .form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 8px rgba(0, 250, 255, 0.5);
+}
+
+#contact-form .btn-primary {
+  background: var(--accent-color);
+  border: none;
+  padding: 10px 30px;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+#contact-form .btn-primary:hover {
+  background: #007bff;
+}
 
 
+/* CONTACT SECTION END */
 
+/* FOOTER SECTION */
+
+/* Footer Section Styling */
+.site-footer {
+  background-color: #0a0a0a;
+  /* Dark background */
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px 0;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.footer-social .social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-social .social-links a:hover {
+  color: #00faff;
+  /* Accent color on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 0.9rem;
+}
+
+/* FOOTER SECTION END */
 
 
 
