@@ -115,40 +115,27 @@ body {
   z-index: 9999;
 }
 
-/* Theme Customizer Panel */
+/* Theme Customizer Panel CSS */
 #theme-customizer {
   position: fixed;
-  top: 0;
-  right: -250px;
-  /* Hidden off-screen */
+  top: 50%;
+  right: -250px; /* Hidden off-screen */
+  transform: translateY(-50%);
   width: 250px;
-  height: 100%;
-  background: rgb(12, 12, 12);
+  background: #0c0c0c; /* Dark background */
   color: var(--secondary-color);
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.7);
   padding: 20px;
+  border-radius: 8px;
   transition: right 0.5s ease;
   z-index: 10000;
 }
 
-/* When panel is open */
 #theme-customizer.open {
-  right: 0;
+  right: 20px; /* When open, it slides in */
 }
 
-/* Close Button inside the Panel */
-#customizer-close {
-  background: transparent;
-  border: none;
-  color: var(--secondary-color);
-  font-size: 24px;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-/* Background particles */
+/* Particles Background behind the content */
 #customizer-panel-particles {
   position: absolute;
   top: 0;
@@ -156,13 +143,23 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  /* Porta i particles dietro il contenuto */
+}
+
+/* Close button styling */
+#customizer-close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  color: var(--secondary-color);
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /* Customizer Field Styles */
 .customizer-field {
-  margin-bottom: 15px;
-  margin-top: 3rem;
+  margin: 20px 0;
 }
 
 .customizer-field label {
@@ -173,10 +170,27 @@ body {
 
 .customizer-field input[type="color"] {
   width: 100%;
-  height: 30px;
+  height: 35px;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
+
+/* Heading adjustments to ensure centering and proper spacing */
+#theme-customizer h3 {
+  text-align: center;
+  margin-top: 20px !important;
+  margin-bottom: 10px !important;
+  font-weight: bold;
+}
+
+/* For the second heading with italic and text-warning classes */
+#theme-customizer .fs-5.fst-italic.text-warning {
+  font-size: 1rem !important;
+  font-style: italic;
+  color: #ffc107 !important; 
+}
+
 
 /* Logo Elite */
 .logo-elite {
@@ -185,7 +199,6 @@ body {
 
 /* Link Styles with Gradient Hover Effect */
 a {
-  /* background-image: linear-gradient(90deg, var(--link-color), var(--link-hover-color)); */
   background-image: linear-gradient(90deg, var(--accent-color), var(--primary-color));
   background-size: 200% auto;
   background-position: left center;

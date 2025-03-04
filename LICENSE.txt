@@ -1,0 +1,31 @@
+Elite OnePage Template - License Agreement
+------------------------------------------
+
+Copyright (c) 2025 KeyBlade Studio  
+All rights reserved.  
+
+## 📌 LICENSE TYPES
+
+1️⃣ **Regular License**  
+- You can use this template for **one** personal or commercial project.  
+- You **cannot** resell, redistribute, or sublicense it.  
+- You **cannot** use it in a product that will be sold (e.g., SaaS, CMS themes).  
+
+2️⃣ **Extended License** (if applicable)  
+- Allows use in **multiple** commercial projects.  
+- You may integrate it into a product for sale, but **not** resell the template as-is.  
+
+## ❌ PROHIBITED USES  
+- **Reselling or redistributing** the template.  
+- **Offering it as a free download** anywhere.  
+- **Claiming authorship** of the design or code.  
+
+## 📞 SUPPORT & UPDATES  
+- The premium version will be available soon!  
+- For customization or inquiries, contact us at [https://keyblade-studio.com](https://keyblade-studio.com).  
+
+## ✅ CREDITS  
+- This template uses **Bootstrap Icons** under their respective license.  
+- Any external assets (images, fonts, etc.) are under their own licenses.  
+
+By using this template, you agree to the terms above.  
